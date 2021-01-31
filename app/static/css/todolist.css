@@ -1,0 +1,155 @@
+.todo-app {
+    height: relative;
+    width: 500px;
+    position: relative;
+}
+
+.btn {
+    float: right;
+    font-size: 10px;
+    line-height: 1px;
+}
+
+.footer {
+    height: relative;
+    width: 600px;
+    position: relative;
+}
+
+.form-control {
+
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0px 6px 0px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.list-group {
+    padding-left: 0;
+    margin-bottom: 20px
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.list-group-item-info {
+    color: #31708f;
+    background-color: #d9edf7;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+.list-group-item-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+}
+
+.btn-default {
+    border: solid orange;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 12px 0 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.glyphicon {
+    position: relative;
+    font-weight: 900;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-danger {
+    font-size: 10px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    padding: 5px 9px 5px 9px;
+}
+
+#create {
+    background-color: #4285F4;;
+    border: solid #4285F4;
+    border-radius: 4px;
+    color: white;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 20px;
+    padding: 6px 15px 6px 15px;
+}
+
+#begin, #end {
+    background-color: white;
+    border: solid white;
+    border-radius: 4px;
+    color: black;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 20px;
+    padding: 6px 15px 6px 15px;
+}
+
+#status {
+    background-color: white;
+    border: solid white;
+    border-radius: 4px;
+    color: black;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 20px;
+    padding: 6px 15px 6px 15px;
+}

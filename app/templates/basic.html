@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Muth Clément & Rominger Timothé">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/css/basic.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    {% endblock %}
+</head>
+<body>
+    {% include "header.html" %}
+    <main style="margin-top: 100px;">{% block content %}{% endblock %}</main>
+    {% include "footer.html" %}
+</body>
+</html>

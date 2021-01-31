@@ -1,0 +1,13 @@
+{% extends "basic.html" %}
+{% block title %}Welcome to your TodoList !{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="../static/css/index.css">
+<link rel="stylesheet" href="../static/css/flash.css">
+<script src='http://ajax.googleapis.com/ajax/libs/japi/1.4/japi.min.js'></script>
+{% endblock %}
+{% block content %}
+<h3 style="bottom: calc(0px + 60px); margin: 0; margin-top: -56px; position: absolute; padding: 0; right: calc(0px + 440px);">
+    {% include "flash.html" %}
+</h3>
+{% endblock %}

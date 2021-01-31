@@ -1,0 +1,51 @@
+<header id="header">
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="{{ url_for(('route_index')) }}">home</a>
+            </li>
+            <li>
+                {% if session['username'] %}
+                <a href="{{ url_for(('route_all_task')) }}">todolist</a>
+                {% else %}
+                <a href="{{ url_for(('route_signin')) }}">todolist</a>
+                {% endif %}
+            </li>
+            <li>
+                {% if session['username'] %}
+                <a href="{{ url_for(('route_profil')) }}">profil</a>
+                {% else %}
+                <a href="{{ url_for(('route_signin')) }}">profil</a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+    <nav id="logs">
+        <ul>
+            {% if not session['username'] %}
+            <li>
+                <a href="{{ url_for(('route_signin_render')) }}">
+                    <button id="sign">
+                        se connecter
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for(('route_signup_render')) }}">
+                    <button id="sign">
+                        s'inscrire
+                    </button>
+                </a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{{ url_for(('route_signout')) }}">
+                    <button id="sign" class="logout">
+                        se deconnecter
+                    </button>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

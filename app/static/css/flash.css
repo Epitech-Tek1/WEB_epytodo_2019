@@ -1,0 +1,29 @@
+#success {
+    display: block;
+    background-color: #42D67F;
+    border: solid #42D67F;
+    border-radius: 3px;
+    margin: auto;
+    position: absolute;
+    top: auto;
+    padding: 15px;
+    width: 400px;
+    position: fixed;
+    z-index: 2000;
+}
+
+#error {
+    display: block;
+    background-color: #F84E5F;
+    border: solid #F84E5F;
+    border-radius: 3px;
+    margin: auto;
+    padding: 15px;
+    width: 400px;
+    position: fixed;
+    z-index: 2000;
+}
+
+.inactive {
+    display: none !important;
+}

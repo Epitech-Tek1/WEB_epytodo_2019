@@ -1,0 +1,21 @@
+{% extends "basic.html" %}
+{% block title %}Signin TodoList !{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="../static/css/logs/sign.css">
+{% endblock %}
+{% block content %}
+    <div id="sign_container">
+        <div id="sign_content">
+            <span id="title"><span style="color: #4285F4">T</span><span style="color: #DB4447">o</span><span style="color: #F4B400">d</span><span style="color: #4285F4">o</span><span style="color: #0F9D58">L</span><span style="color: #DB4447">i</span><span style="color: #4285F4">s</span><span style="color: #F4B400">t</span></span>
+            <h1 class="subtitle">se connecter</br><p>continuer sur TodoList</p></h1>
+            <div id="logs_container">
+                <form method="POST" action="{{ url_for(('route_signin')) }}">
+                    <input name="username" type="text" placeholder="Username" required="" \>
+                    <input name="password" type="password" placeholder="Password" required="" \>
+                    <input id="submit" name="submit" type="submit" placeholder="envoyer" \>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

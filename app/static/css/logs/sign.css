@@ -1,0 +1,66 @@
+#sign_container {
+    opacity: 1;
+    border: solid rgb(74, 79, 91) 1px;
+    border-radius: 5px;
+    display: block;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+#sign_content {
+    margin: auto;
+    padding: 48px;
+}
+
+#title {
+    font-weight: 700;
+    font-size: 25px;
+    margin: auto;
+}
+
+.subtitle {
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.subtitle > p {
+    font-size: 18px;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+
+#logs_container {
+    display: block;
+    width: 100%;
+}
+
+#logs_container input {
+    background-color: white;
+    border: solid transparent  1px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 80%;
+}
+
+#logs_container input:hover {
+    border: solid #4285F4 1px;
+}
+
+#logs_container #submit {
+    background-color: #4285F4;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    width: 30%;
+}

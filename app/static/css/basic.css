@@ -1,0 +1,21 @@
+body {
+    background-color: #181818;
+    /* background-image: url("../img/wallpaper.jpg"); */
+    /* background-size: cover; */
+    color: white;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    display: inline;
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

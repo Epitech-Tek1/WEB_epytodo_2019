@@ -1,0 +1,68 @@
+{% extends "basic.html" %}
+{% block title %}Welcome to your TodoList !{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="../../static/css/index.css">
+<link rel="stylesheet" href="../../static/css/flash.css">
+<link rel="stylesheet" href="../../static/css/todolist.css">
+<script src='http://ajax.googleapis.com/ajax/libs/japi/1.4/japi.min.js'></script>
+{% endblock %}
+{% block content %}
+    <h3 style="bottom: calc(0px + 60px); margin: 0; margin-top: -56px; position: absolute; padding: 0; right: calc(0px + 440px);">
+        {% include "flash.html" %}
+    </h3>
+    <div id="app">
+        <div class="container-fluid col-centered todo-app" style="margin: auto;">
+            <center>
+                <h1><strong>todos</strong></h1>
+            </center>
+            <form id="add-task-form" style="text-align: center;" action="{{ url_for('route_add_task') }}" method="POST">
+                <input id="title" name="title" class="form-control" placeholder="Title task" required="" \>
+                <input id="begin" name="begin" type="date" required="" \>
+                <input id="end" name="end" type="date" required="" \>
+                <select id="status" name="status">
+                    <option>not started</option>
+                    <option>in progress</option>
+                    <option>done</option>
+                </select>
+                <button id="create" type="submit">Create !</button>
+            </form>
+            <h3>
+                <i>uncompleted </i>
+                <span v-show="remaining"></span>
+            </h3>
+            {% for task in task %}
+            {% if task[4] != "done" %}
+            <ul class="list-group" v-show="todos.length">
+                <li class="list-group-item list-group-item-info" v-for="todo in remaining">
+                    <span>{{ task[1] }}</span>
+                    <a href="{{ url_for('route_delete_task', task_id=task[0]) }}" onclick="event.preventDefault(); document.getElementById('delete-task-form-{{ task[0] }}').submit();">
+                        <button class="btn btn-default">✖<span class="glyphicon glyphicon-remove" /></button>
+                    </a>
+                    <form id="delete-task-form-{{ task[0] }}" action="{{ url_for('route_delete_task', task_id=task[0]) }}" method="POST"></form>
+                    <a href="{{ url_for('route_set_complet', task_id=task[0]) }}" onclick="event.preventDefault(); document.getElementById('set-task-form-{{ task[0] }}').submit();">
+                        <button class="btn btn-default" style="margin-top: -18px;">✔<span class="glyphicon glyphicon-ok" /></button>
+                    </a>
+                    <form id="set-task-form-{{ task[0] }}" action="{{ url_for('route_set_complet', task_id=task[0]) }}" method="POST"></form>
+                </li>
+            </ul>
+            {% endif %}
+            {% endfor %}
+            <p v-else>Start hacking and add some tasks!</p>
+            <div v-if="complete.length">
+                <h3><i>completed</i> (N.A)</h3>
+                {% for task in task %}
+                {% if task[4] == "done" %}
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success" v-for="todo in complete">
+                        {{ task[1] }}
+                        <button class="btn btn-default" @click="completed(todo)">✔ <span class="glyphicon glyphicon-ok" />
+                    </li>
+                </ul>
+                {% endif %}
+                {% endfor %}
+                <button class="btn btn-danger" @click="clearAllCompleted()">clear</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

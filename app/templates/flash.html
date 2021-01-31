@@ -1,0 +1,19 @@
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div id="{% if message.result %}success{% else %}error{% endif %}">
+    {% if message.result %}
+        <!-- <i></i> -->
+    {% else %}
+        <!-- <i></i> -->
+    {% endif %}
+    {% if message.result %}{{ message.result|title }}{% else %}{{ message.error|title }}{% endif %}
+</div>
+<script type="text/javascript">
+    setTimeout(function time() {
+        $("#{% if message.result %}success{% else %}error{% endif %}").addClass('inactive');
+    }, 3000)
+</script>
+{% endfor %}
+{% endif %}
+{% endwith %}
